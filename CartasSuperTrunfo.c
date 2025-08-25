@@ -34,7 +34,7 @@ int main() {
 
     //Pedindo para inserir dados da população 
     printf("Digite a população da primeira cidade: \n");
-    scanf("%d", &populacao1);
+    scanf("%lu", &populacao1);
     
     //Pedindo para inserir a quantidade dos pontos turísticos
     printf("Digite a quantidade de pontos turísticos da primeira cidade: \n");
@@ -58,7 +58,7 @@ int main() {
 
     //Pedindo para inserir dados da população
     printf("Digite a população da segunda cidade: \n");
-    scanf("%d", &populacao2);
+    scanf("%lu", &populacao2);
     
     //Pedindo para inserir a quantidade dos pontos turísticos
     printf("Digite a quantidade de pontos turísticos da segunda cidade: \n");
@@ -81,8 +81,8 @@ int main() {
     superpoder2 = (float) (populacao2 + ptsturisticos2) + area1 + pib2 + (1/densipop2) + pibpcap2;
 
     //Imprime os dados das duas cartas
-    printf("Carta da primeira cidade: \nCódigo: %s\nNome: %s\nPopulação: %d \nPontos turísticos: %d \nÁrea: %.2f \nPIB: %.2f \nDensidade populacional: %.2f hab/km² \nPIB per capita: %.2f reais\n", codigo1, nomecdd1, populacao1, ptsturisticos1, area1, pib1, densipop1, pibpcap1);
-    printf("Carta da segunda cidade: \nCódigo: %s\nNome: %s \nPopulação: %d \nPontos turísticos: %d \nÁrea: %.2f \nPIB: %.2f \nDensidade populacional: %.2f hab/km² \nPIB per capita: %.2f reais\n", codigo2, nomecdd2, populacao2, ptsturisticos2, area2, pib2, densipop2, pibpcap2);
+    printf("Carta da primeira cidade: \nCódigo: %s\nNome: %s\nPopulação: %lu \nPontos turísticos: %d \nÁrea: %.2f \nPIB: %.2f \nDensidade populacional: %.2f hab/km² \nPIB per capita: %.2f reais\n", codigo1, nomecdd1, populacao1, ptsturisticos1, area1, pib1, densipop1, pibpcap1);
+    printf("Carta da segunda cidade: \nCódigo: %s\nNome: %s \nPopulação: %lu \nPontos turísticos: %d \nÁrea: %.2f \nPIB: %.2f \nDensidade populacional: %.2f hab/km² \nPIB per capita: %.2f reais\n", codigo2, nomecdd2, populacao2, ptsturisticos2, area2, pib2, densipop2, pibpcap2);
     
     //Compara os dados das cartas e imprime o vencedor
     printf("*** Comparações dos dados ***\n");
