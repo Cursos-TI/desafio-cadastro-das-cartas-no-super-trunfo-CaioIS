@@ -20,8 +20,17 @@ int main() {
     
     //Declarando as variáveis
     int populacao1, populacao2, ptsturisticos1, ptsturisticos2;
-    float area1, area2, pib1, pib2;
+    float area1, area2, pib1, pib2, densipop1, densipop2, pibpcap1, pibpcap2;
+    char codigo1[50], codigo2[50], nomecdd1[50], nomecdd2[50]; 
     
+    //Pedindo para inserir o código da cidade
+    printf("Digite o código da primeira cidade: \n");
+    scanf("%s", codigo1); 
+
+    //Pedindo para inserir o nome da cidade (sem espaços)
+    printf("Digite o nome da primeira cidade: \n");
+    scanf("%s", nomecdd1);
+
     //Pedindo para inserir dados da população 
     printf("Digite a população da primeira cidade: \n");
     scanf("%d", &populacao1);
@@ -37,6 +46,14 @@ int main() {
     //Pedindo para inserir o PIB 
     printf("Digite o PIB da primeira cidade: \n");
     scanf("%f", &pib1);
+
+    //Pedindo para inserir o código da cidade
+    printf("Digite o código da segunda cidade: \n");
+    scanf("%s", codigo2); 
+
+    //Pedindo para inserir o nome da cidade (sem espaços)
+    printf("Digite o nome da segunda cidade: \n");
+    scanf("%s", nomecdd2);
 
     //Pedindo para inserir dados da população
     printf("Digite a população da segunda cidade: \n");
@@ -54,8 +71,14 @@ int main() {
     printf("Digite o PIB da segunda cidade: \n");
     scanf("%f", &pib2);
 
+    //Calcula densidade populacional e pib per capita
+    densipop1 = populacao1 / area1;
+    densipop2 = populacao2 / area2;
+    pibpcap1 = pib1 / populacao1;
+    pibpcap2 = pib2 / populacao2;
+
     //Imprime os dados das duas cartas
-    printf("Carta da primeira cidade: \nPopulação: %d \nPontos turísticos: %d \nÁrea: %f \nPIB: %.2f \n", populacao1, ptsturisticos1, area1, pib1);
-    printf("Carta da segunda cidade: \nPopulação: %d \nPontos turísticos: %d \nÁrea: %f \nPIB: %.2f \n", populacao2, ptsturisticos2, area2, pib2);
+    printf("Carta da primeira cidade: \nCódigo: %s\nNome: %s\nPopulação: %d \nPontos turísticos: %d \nÁrea: %.2f \nPIB: %.2f \nDensidade populacional: %.2f hab/km² \nPIB per capita: %.2f reais\n", codigo1, nomecdd1, populacao1, ptsturisticos1, area1, pib1, densipop1, pibpcap1);
+    printf("Carta da segunda cidade: \nCódigo: %s\nNome: %s \nPopulação: %d \nPontos turísticos: %d \nÁrea: %.2f \nPIB: %.2f \nDensidade populacional: %.2f hab/km² \nPIB per capita: %.2f reais", codigo2, nomecdd2, populacao2, ptsturisticos2, area2, pib2, densipop2, pibpcap2);
     return 0;
 }
